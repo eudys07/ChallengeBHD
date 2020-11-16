@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <button (click)="onCreate()">Create Comment</button>
+  </div>
+  <table class="tables" *ngFor="let comment of listComment">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Website</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ comment.name }}</td>
+        <td>{{ comment.email }}</td>
+        <td>{{ comment.webSite }}</td>
+        <td><button (click)="onEdit()">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
